@@ -1,0 +1,36 @@
+throwErrorOnExtraParameters: true
+
+templates:
+    A4 portrait: !template
+        reportTemplate: A4_Portrait.jrxml
+        tableData: jrDataSource
+        attributes:
+            title: !string {}
+            subtitle: !string {}
+            datasource: !datasource
+                attributes:
+                    map: !map
+                        maxDpi: 254
+                        width: 555
+                        height: 600
+                    backgroundLayers: !staticLayers
+                      default:
+                        layers:
+                          - type: "osm"
+                            baseURL : "http://otile1.mqcdn.com/tiles/1.0.0/map/"
+                            imageExtension : "png"
+                            opacity: 0.3
+                          - type: "osm"
+                            baseURL : "http://otile1.mqcdn.com/tiles/1.0.0/sat/"
+                            imageExtension : "png"
+                            
+        processors:
+          - !reportBuilder # compile all reports in current directory
+            directory: '.'
+          - !createDataSource
+            processors:
+              - !createMap {}
+              - !addBackgroundLayers
+                inputMapper:
+                  backgroundLayers: staticLayers
+                  map: map

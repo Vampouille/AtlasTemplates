@@ -1,0 +1,124 @@
+{
+    "layout": "A4 portrait",
+    "outputFormat": "pdf",
+    "attributes": {
+        "title": "$F{title}",
+        "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras egestas, massa eget placerat fermentum, nunc massa facilisis enim, id eleifend orci lacus sed sem.",
+        "datasource": [{
+            "title": "Lake View",
+            "map": {
+								"projection": "EPSG:900913",
+								"dpi": 72,
+								"center": [-8233518.5005945, 4980320.4059228],
+								"scale": 25000,
+								"layers": [{
+										"type": "geojson",
+										"style": {
+												"*": {
+														"symbolizers": [{
+																"fillColor": "red",
+																"strokeColor": "red",
+																"strokeOpacity": 1,
+																"strokeWidth": 2,
+																"pointRadius": 6,
+																"type": "point"
+														}]
+												},
+												"version": "2"
+										},
+										"geoJson": {
+												"type": "FeatureCollection",
+												"features": [{
+														"type": "Feature",
+														"properties": {
+																"name": "Lake View"
+														},
+														"geometry": {
+																"type": "Point",
+																"coordinates": [-8233518.5005945, 4980320.4059228]
+														}
+												}]
+										}
+								}
+													]
+						}
+        }, {
+            "title": "Chez Jean",
+            "map": {
+              "projection": "EPSG:900913",
+              "dpi": 72,
+              "center": [-8234918.5005945, 4981920.4059228],
+              "scale": 25000,
+              "layers": [{
+                  "type": "geojson",
+                  "style": {
+                      "*": {
+                        "symbolizers": [{
+                          "fillColor": "red",
+                          "strokeColor": "red",
+                          "strokeOpacity": 1,
+                          "strokeWidth": 2,
+                          "pointRadius": 6,
+                          "type": "point"
+                        }]
+                      },
+                      "version": "2"
+                  },
+                  "geoJson": {
+                      "type": "FeatureCollection",
+                      "features": [{
+                          "type": "Feature",
+                          "properties": {
+                              "name": "Chez Jean"
+                          },
+                          "geometry": {
+                              "type": "Point",
+                              "coordinates": [-8234918.5005945, 4981920.4059228]
+                          }
+                      }]
+                  }
+              }
+              
+            ]
+          }
+        }, {
+            "title": "Little Italy",
+            "map": {
+              "projection": "EPSG:900913",
+              "dpi": 72,
+              "center": [-8234618.5005945, 4981920.4059228],
+              "scale": 25000,
+              "layers": [{
+                  "type": "geojson",
+                  "style": {
+                      "*": {
+                        "symbolizers": [{
+                          "fillColor": "red",
+                          "strokeColor": "red",
+                          "strokeOpacity": 1,
+                          "strokeWidth": 2,
+                          "pointRadius": 6,
+                          "type": "point"
+                        }]
+                      },
+                      "version": "2"
+                  },
+                  "geoJson": {
+                      "type": "FeatureCollection",
+                      "features": [{
+                          "type": "Feature",
+                          "properties": {
+                              "name": "Little Italy"
+                          },
+                          "geometry": {
+                              "type": "Point",
+                              "coordinates": [-8234618.5005945, 4981920.4059228]
+                          }
+                      }]
+                  }
+              }
+            ]
+          }
+        }]
+    }
+}
