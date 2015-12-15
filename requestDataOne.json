@@ -10,7 +10,7 @@
 										{ "type": "osm",
 											"baseURL" : "http://otile1.mqcdn.com/tiles/1.0.0/map/",
                       "imageExtension" : "png",
-											"opacity": 1.0},
+											"opacity": 0.3},
 										{ "type": "osm",
 											"baseURL" : "http://otile1.mqcdn.com/tiles/1.0.0/sat/",
                       "imageExtension" : "png"}
