@@ -1,0 +1,43 @@
+{
+    "layout": "A4 portrait", /* possible values : 'A4 portrait', 'A3 portrait', 'A4 landscape' or 'A3 landscape' */
+    "outputFormat": "pdf", /* possible values : 'zip' or 'pdf' */
+		"dpi": 216, /* resolution of extracted map */ 
+		"layers": [ /* Configuration of background layers and "couche support" (please translate), order are important */
+				/* "couche support" should be at first place, layers are drawed in reverse order as declared here */
+				{ "type": "wms",
+					"baseURL" : "http://sdi.georchestra.org/geoserver/pmauduit_test/wms",
+					"layers" : ["pmauduit_test:toilettes_publiques"],
+					"version" : "1.1.1",
+					"customParams" : {"transparent": true}
+				},
+				/* Then, we have background layers */
+				{ "type": "osm",
+					"baseURL" : "http://otile1.mqcdn.com/tiles/1.0.0/map/",
+					"imageExtension" : "png",
+					"opacity": 0.3},
+				{ "type": "osm",
+					"baseURL" : "http://otile1.mqcdn.com/tiles/1.0.0/sat/",
+					"imageExtension" : "png"}
+		],
+    "pages": [
+				{ "title" : "Armoire de rue N°25689",
+					"subtitle" : "Armoire optique opérée par la société Free SAS."
+					"center" : [-8233518.5005945, 4980320.4059228],
+					"scale" : 25000,
+					"filename" : "armoire_1_atlas.pdf" /* Only use when outputFormat is zip */
+				},
+				{ "title" : "Armoire de rue N°26697",
+					"subtitle" : "Armoire optique opérée par la société Orange."
+					"center" : [-8468418.8974655, 4789870.2316878],
+					"scale" : 25000,
+					"filename" : "armoire_2_atlas.pdf"
+				},
+				{ "title" : "Armoire de rue N°26985",
+					"subtitle" : "Armoire optique opérée par la société SFR."
+					"center" : [-8648683.6468445, 4647480.6846846],
+					"scale" : 25000,
+					"filename" : "armoire_3_atlas.pdf"
+				}
+		]
+
+}
