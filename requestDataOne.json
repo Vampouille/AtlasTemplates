@@ -7,13 +7,15 @@
         "datasource": [{
             "map": {
 								"dpi" : 216,
-								"projection": "EPSG:900913", /* 900913 */
-								"bbox": [651066.068160301, 5729313.48490451, 659150.2009012, 5719824.49323848], /* [5.848626, 45.680609, 5.921247, 45.621023] */
+								"projection": "EPSG:900913",
+								"bbox": [-193136.533539059, 6130268.4459373, -177682.716549174, 6118498.42261642], /* [5.848626, 45.680609, 5.921247, 45.621023] */
 								"layers": [
 													 { "type": "wms",
-														 "baseURL" : "http://visi-sextant.ifremer.fr/cgi-bin/sextant/wms/bgmb",
-														 "layers" : ["SISMER_mesures"],
-														 "version" : "1.1.1"},
+														 "baseURL" : "http://sdi.georchestra.org/geoserver/pmauduit_test/wms",
+														 "layers" : ["pmauduit_test:toilettes_publiques"],
+														 "version" : "1.1.1",
+														 "customParams" : {"transparent": true}
+													 },
 													 { "type": "osm",
 														 "baseURL" : "http://otile1.mqcdn.com/tiles/1.0.0/map/",
 														 "imageExtension" : "png"},
