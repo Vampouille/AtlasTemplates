@@ -7,7 +7,8 @@ templates:
         attributes:
             title: !string {}
             subtitle: !string {}
-            legendURL: !string {}
+            legendURL: !string
+              default: ""
             datasource: !datasource
                 attributes:
                     map: !map

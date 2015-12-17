@@ -4,6 +4,7 @@
     "attributes": {
         "title": "Restorante",
 				"legendURL": "http://www.ifremer.fr/services/wms/biologie?language=fre&SERVICE=WMS&VERSION=1.0.0&REQUEST=GetLegendGraphic&FORMAT=image/png&TRANSPARENT=true&LAYER=IFR_AAMP_ZONES_BIO_MED_P",
+				//"legendURL": "http://www.ifremer.fr/services/wms/biologie?language=fre&SERVICE=WMS&VERSION=1.0.0&REQUEST=GetLegendGraphic&FORMAT=image/png&TRANSPARENT=true&LAYER=IFR_AAMP_HAB_EUNIS_300_ATL_P",
         "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras egestas, massa eget placerat fermentum, nunc massa facilisis enim, id eleifend orci lacus sed sem.",
         "datasource": [{
             "map": {
