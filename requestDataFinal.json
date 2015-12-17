@@ -3,15 +3,14 @@
     "outputFormat": "pdf", /* possible values : 'zip' or 'pdf' */
 		"dpi": 216, /* resolution of extracted map */
 		"displayLegend": true,
-		"layers": [ /* Configuration of background layers and "couche support" (please translate), order are important */
-				/* "couche support" should be at first place, layers are drawed in reverse order as declared here */
-				{ "type": "wms",
-					"baseURL" : "http://sdi.georchestra.org/geoserver/pmauduit_test/wms",
-					"layers" : ["pmauduit_test:toilettes_publiques"],
-					"version" : "1.1.1",
-					"customParams" : {"transparent": true}
-				},
-				/* Then, we have background layers */
+		"couche_support": { "type": "wms",
+												"baseURL" : "http://sdi.georchestra.org/geoserver/pmauduit_test/wms",
+												"layers" : ["pmauduit_test:toilettes_publiques"],
+												"version" : "1.1.1",
+												"customParams" : {"transparent": true}
+											},
+		"baseLayers": [ /* Configuration of background layers, order are important */
+				/* layers are drawed in reverse order as declared here */
 				{ "type": "osm",
 					"baseURL" : "http://otile1.mqcdn.com/tiles/1.0.0/map/",
 					"imageExtension" : "png",
