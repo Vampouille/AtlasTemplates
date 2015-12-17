@@ -1,7 +1,8 @@
 {
     "layout": "A4 portrait", /* possible values : 'A4 portrait', 'A3 portrait', 'A4 landscape' or 'A3 landscape' */
     "outputFormat": "pdf", /* possible values : 'zip' or 'pdf' */
-		"dpi": 216, /* resolution of extracted map */ 
+		"dpi": 216, /* resolution of extracted map */
+		"displayLegend": true,
 		"layers": [ /* Configuration of background layers and "couche support" (please translate), order are important */
 				/* "couche support" should be at first place, layers are drawed in reverse order as declared here */
 				{ "type": "wms",
