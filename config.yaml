@@ -14,7 +14,7 @@ templates:
                     map: !map
                         maxDpi: 254
                         width: 555
-                        height: 600
+                        height: 590
         processors:
           - !reportBuilder # compile all reports in current directory
             directory: '.'
@@ -40,6 +40,31 @@ templates:
                         maxDpi: 254
                         width: 590
                         height: 480
+        processors:
+          - !reportBuilder # compile all reports in current directory
+            directory: '.'
+          - !configureHttpRequests
+            httpProcessors:
+              - !addHeaders
+                headers:
+                  User-Agent: "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:42.0) Gecko/20100101 Firefox/42.0"
+          - !createDataSource
+            processors:
+              - !createMap {}
+    A3 portrait: !template
+        reportTemplate: A3_Portrait.jrxml
+        tableData: jrDataSource
+        attributes:
+            title: !string {}
+            subtitle: !string {}
+            legendURL: !string
+              default: ""
+            datasource: !datasource
+                attributes:
+                    map: !map
+                        maxDpi: 254
+                        width: 800
+                        height: 865
         processors:
           - !reportBuilder # compile all reports in current directory
             directory: '.'
